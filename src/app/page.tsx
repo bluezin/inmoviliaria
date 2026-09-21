@@ -1,4 +1,3 @@
-import { CtaBanner } from "@/components/home/CtaBanner";
 import { FeaturedListings } from "@/components/home/FeaturedListings";
 import { Hero } from "@/components/home/Hero";
 import { Services } from "@/components/home/Services";
@@ -15,7 +14,7 @@ export default async function HomePage() {
       <Stats />
       <FeaturedListings properties={featured} />
       <Services />
-      <CtaBanner />
+      {/* <CtaBanner /> */}
     </>
   );
 }

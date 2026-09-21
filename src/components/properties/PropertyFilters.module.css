@@ -116,3 +116,14 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .filters {
+    grid-template-columns: 1fr !important;
+  }
+
+  .searchBar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
