@@ -1,0 +1,124 @@
+.wrapper {
+  display: grid;
+  gap: 2rem;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding: 0 1rem 4rem;
+}
+
+.heroSkeleton {
+  height: 9rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(90deg, #e8ecf1 25%, #f3f5f8 50%, #e8ecf1 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.body {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.searchSkeleton {
+  height: 3rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg, #e8ecf1 25%, #f6f8fa 50%, #e8ecf1 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.filtersSkeleton {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.filterSkeleton {
+  height: 3.5rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg, #e8ecf1 25%, #f6f8fa 50%, #e8ecf1 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.media {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(90deg, #e8ecf1 25%, #f6f8fa 50%, #e8ecf1 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.cardBody {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1rem;
+}
+
+.line,
+.lineShort,
+.lineMedium {
+  height: 1rem;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #e8ecf1 25%, #f6f8fa 50%, #e8ecf1 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.lineShort {
+  width: 35%;
+}
+
+.lineMedium {
+  width: 60%;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filtersSkeleton {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .wrapper {
+    padding-inline: 2rem;
+  }
+}

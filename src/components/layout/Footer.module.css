@@ -1,0 +1,113 @@
+.footer {
+  margin-top: auto;
+  background: #0b1220;
+  color: #cbd5e1;
+  padding: 3.5rem 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.brandName strong {
+  color: #93b4ff;
+}
+
+.blurb {
+  margin-top: 1rem;
+  max-width: 22rem;
+  color: #9aa8bb;
+  line-height: 1.6;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.contactItem strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.colTitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.links a {
+  color: #9aa8bb;
+  transition: color 150ms ease;
+}
+
+.links a:hover {
+  color: #93b4ff;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgb(255 255 255 / 0.1);
+  font-size: 0.875rem;
+  color: #7c8aa0;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}

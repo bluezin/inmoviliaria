@@ -1,0 +1,87 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2.25rem;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 1.5rem;
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.center .eyebrow::before,
+.center .eyebrow::after {
+  content: "";
+}
+
+.title {
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--color-foreground);
+}
+
+.description {
+  max-width: 40rem;
+  color: var(--color-foreground-soft);
+  font-size: 1rem;
+}
+
+.action {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .heading {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .heading > .eyebrow {
+    order: 0;
+    flex-basis: 100%;
+  }
+
+  .heading > .title {
+    flex: 1 1 auto;
+  }
+
+  .heading > .description {
+    flex: 1 1 100%;
+  }
+
+  .heading > .action {
+    flex: 0 0 auto;
+  }
+
+  .center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .center .description {
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,264 @@
+.page {
+  display: grid;
+  gap: 1.75rem;
+  padding-block: 2.5rem 5rem;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-foreground-soft);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: color 150ms ease;
+}
+
+.back svg {
+  transform: rotate(180deg);
+}
+
+.back:hover {
+  color: var(--color-primary);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.015em;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  color: var(--color-foreground-soft);
+}
+
+.priceBox {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.priceNote {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.mainCol,
+.sideCol {
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--color-foreground);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.detailIcon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.detailItem div {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailValue {
+  font-weight: 800;
+}
+
+.detailLabel {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+.description {
+  color: var(--color-foreground-soft);
+  line-height: 1.75;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.amenity {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.amenity svg {
+  color: var(--color-accent);
+}
+
+.agentCard,
+.infoCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.agent {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.agentAvatar {
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.agentName {
+  font-weight: 700;
+}
+
+.agentRole {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+.agentContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.agentContacts a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-foreground-soft);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: color 150ms ease;
+}
+
+.agentContacts a:hover {
+  color: var(--color-primary);
+}
+
+.agentContacts a svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.agentContacts a.noIcon {
+  margin-left: 2.35rem;
+}
+
+.agentNote {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+.infoList {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.infoList div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.infoList dt {
+  color: var(--color-muted);
+}
+
+.infoList dd {
+  text-align: right;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .body {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  }
+
+  .details {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

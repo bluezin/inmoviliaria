@@ -1,0 +1,63 @@
+.section {
+  padding-block: 4rem;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 1.5rem;
+  color: #fff;
+  background:
+    linear-gradient(100deg, rgb(29 78 216 / 0.95), rgb(30 58 138 / 0.9)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=70") center/cover;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  right: -4rem;
+  top: -4rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.08);
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  right: 4rem;
+  bottom: -6rem;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: rgb(251 133 0 / 0.35);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 30rem;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.text {
+  margin-top: 0.9rem;
+  color: #dbe7ff;
+}
+
+.content .button {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    padding: 4rem 3rem;
+  }
+}

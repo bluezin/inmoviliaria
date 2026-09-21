@@ -1,0 +1,11 @@
+.section {
+  padding-block: 4.5rem;
+  background: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: 5.5rem;
+  }
+}

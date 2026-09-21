@@ -1,0 +1,118 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.searchBar {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.searchField {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-muted);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.searchField:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(29 78 216 / 0.12);
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.75rem 0;
+  font-size: 0.9375rem;
+  color: var(--color-foreground);
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.field select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  color: var(--color-foreground);
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.field select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(29 78 216 / 0.12);
+}
+
+.reset {
+  align-self: end;
+  justify-self: start;
+  grid-column: span 2;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.6rem 0.25rem;
+}
+
+.reset:hover {
+  text-decoration: underline;
+}
+
+.count {
+  color: var(--color-foreground-soft);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 640px) {
+  .filters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reset {
+    grid-column: auto;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .filters {
+    grid-template-columns: repeat(5, 1fr) auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchButton span {
+    display: none;
+  }
+}
