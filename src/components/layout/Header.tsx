@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { label: "Inicio", href: "/" },
   { label: "Propiedades", href: "/properties" },
   { label: "Servicios", href: "/#servicios" },
-  { label: "Contacto", href: "/#contacto" },
+  // { label: "Contacto", href: "/#contacto" },
 ];
 
 export function Header() {
